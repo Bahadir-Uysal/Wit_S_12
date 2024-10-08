@@ -3,7 +3,7 @@ function Header() {
 
     return (
       <>
-        <p>Bahadır UYSAL</p>
+        <h1>Bahadır UYSAL</h1>
       </>
     )
   }
