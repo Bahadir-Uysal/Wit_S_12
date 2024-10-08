@@ -1,22 +1,28 @@
-import Header from "./Header"
-import myImage from '../assets/foto.png';
-import './Hero.css'
-import "../App.css"
+import Header from "./Header";
+import myImage from "../assets/foto.png";
+import "./Hero.css";
 function Hero() {
- 
-
-    return (
-      <>
+  return (
+    <>
       <div className="hero-container">
         <Header></Header>
-        <h1>I am a Frontend Developer</h1>
-        <h2>...who likes to craft solid and scalable frontend products with great user experiences.</h2>
-        <button>Github</button>
-        <button>Linkedin</button>
-        <img src={myImage}  />
+        <div className="hero-content">
+          <div className="text-content">
+            <h1>I am a Frontend Developer...</h1>
+            <p>
+              ...who likes to craft solid and scalable frontend products with
+              great user experiences.
+            </p>
+            <div className="hero-buttons">
+              <button>Github</button>
+              <button>Linkedin</button>
+            </div>
+          </div>
+          <img src={myImage} className="hero-img" />
         </div>
+      </div>
     </>
-    )
-  }
-  
-  export default Hero
+  );
+}
+
+export default Hero;
