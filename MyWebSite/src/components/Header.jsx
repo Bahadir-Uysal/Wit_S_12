@@ -6,9 +6,6 @@ function Header() {
         <h1>Bahadır UYSAL</h1>
         <div className="options">
           <p>TÜRKÇE'YE GEÇ</p>
-          <div className="toggle-btn">
-            <button>DARK MODE</button>
-          </div>
         </div>
       </header>
     </>

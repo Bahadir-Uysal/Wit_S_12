@@ -1,11 +1,34 @@
 .header {
   align-self: flex-start !important;
-  flex-direction: row;
-  justify-content: space-between;
   margin-bottom: 10rem;
   margin-left: 7rem;
   font-size: 1.5rem;
 }
+.header .options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ddd;
+  }
+  
+  .toggle-btn.on {
+    background-color: #5cb85c; 
+    color: white;
+  }
+  
+  .toggle-btn.off {
+    background-color: #d9534f;
+    color: white;
+  }
+
 .hero-container {
   margin: 0;
   background: rgb(71, 49, 211);
