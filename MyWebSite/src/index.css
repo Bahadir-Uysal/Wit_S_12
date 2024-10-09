@@ -2,7 +2,7 @@
  width: 1440px;
  height: auto;
  margin: 0;
-}
+ overflow-x: hidden}
 body {
     margin: 0;
 }
