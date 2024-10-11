@@ -5,6 +5,7 @@ import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import { useEffect } from "react";
 import { useLanguageContext } from "./contexts/LanguageContext";
+import Footer from "./components/Footer";
 
 function App() {
   const { theme } = useLanguageContext();
@@ -23,6 +24,7 @@ function App() {
         <Skills></Skills>
         <Profile></Profile>
         <Projects></Projects>
+        <Footer></Footer>
       </div>
     </>
   );
