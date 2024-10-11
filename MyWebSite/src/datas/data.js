@@ -4,7 +4,7 @@ export const languageData = {
         heading: "I am a Frontend Developer",
         subHeading:
           "...who likes to craft solid and scalable frontend products with great user experiences.",
-        currentLang: "English",
+        currentLang: "Türkçe",
         darkMode: "dark mode",
         lightMode: "light mode",
       },
@@ -58,7 +58,7 @@ export const languageData = {
         heading: "Frontend Developer...",
         subHeading:
           "... sağlam ve ölçeklenebilir, harika kullanıcı deneyimlerine sahip frontend ürünleri oluşturmayı seven biri.",
-        currentLang: "Türkçe",
+        currentLang: "English",
         darkMode: "karanlık tema",
         lightMode: "aydınlık tema",
       },

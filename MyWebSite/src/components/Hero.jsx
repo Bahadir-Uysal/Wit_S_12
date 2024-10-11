@@ -1,19 +1,13 @@
 import Header from "./Header";
 import myImage from "../assets/foto.png";
 import "./Hero.css";
-import { useState } from "react";
 function Hero() {
-  const [isToggled, setIsToggled] = useState(false);
-  const handleToggle = () => {
-    setIsToggled(!isToggled);
-  };
+  
   return (
     <>
       <div className="hero-container">
         <Header></Header>
-        <div className="toggle">
-          <button className="toggle-btn" onClick={handleToggle}>{isToggled ? "ON" : "OFF"}</button>
-        </div>
+        
         <div className="hero-content">
           <div className="text-content">
             <h1>I am a Frontend Developer...</h1>
