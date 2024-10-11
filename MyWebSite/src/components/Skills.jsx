@@ -5,23 +5,27 @@ import redux from "../assets/redux.png";
 import node from "../assets/node.jpeg";
 import vscode from "../assets/vscode.png";
 import "./Skill.css";
+import {skillIcons} from "../datas/icons"
+import { useLanguageContext } from "../contexts/LanguageContext";
+
 
 function Skills() {
+  const { texts } = useLanguageContext();
   return (
     <>
       <div className="skill-container">
         <div className="skill-content">
           <div className="skill-heading">
-            <h1>Skills</h1>
+            <h1>{texts.skillsSection.heading}</h1>
           </div>
           <div className="skill-cards">
             <div className="skill-card">
               <img src={js} alt="javascript" />
-              <p>JAVASCRIPT</p>
+              <p>{skillIcons.title1}</p>
             </div>
             <div className="skill-card">
               <img src={react} alt="react" />
-              <p>REACT</p>
+              <p>{skillIcons.title2}</p>
             </div>
             <div className="skill-card">
               <img src={redux} alt="redux" />

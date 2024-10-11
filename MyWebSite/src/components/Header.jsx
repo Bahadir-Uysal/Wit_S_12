@@ -1,19 +1,14 @@
-import { useState } from "react";
 import { useLanguageContext } from "../contexts/LanguageContext";
 
 /* eslint-disable react/no-unescaped-entities */
 function Header() {
-  const [isToggled, setIsToggled] = useState(false);
-  const handleToggle = () => {
-    setIsToggled(!isToggled);
-  };
   const { theme, toggleTheme, texts, language, changeLang } =
     useLanguageContext();
   return (
     <>
       <header className="header">
-        <h1>Bahadır UYSAL</h1>
-        <div className="options">
+      <h1>Bahadır UYSAL</h1>
+        <div className="lang-options">
           {language === "tr" ? (
             <>
               <span>Change to </span>
@@ -29,10 +24,18 @@ function Header() {
               <span>'ye geç</span>
             </>
           )}
-          <div className="toggle">
-            <button className="toggle-btn" onClick={handleToggle}>
-              {isToggled ? "ON" : "OFF"}
-            </button>
+          <div className="theme-optios">
+            <img
+              onClick={toggleTheme}
+              src={theme === "dark" ? "dark-switch.png" : "light-switch.png"}
+              alt="theme mode"
+              className="h-6 cursor-pointer"
+            />
+            <div className="uppercase  text-dark-pblila dark:text-dark-silver font-bold">
+              {theme === "dark"
+                ? texts.introSection.lightMode
+                : texts.introSection.darkMode}
+            </div>
           </div>
         </div>
       </header>
