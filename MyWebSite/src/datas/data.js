@@ -57,6 +57,7 @@ export const languageData = {
       heading: "Send me a message!",
       line1: "Got a question or proposal, or just want",
       line2: "to say hello? Go ahead.",
+      mail: "uysalbahadir@icloud.com",
     },
   },
   tr: {
