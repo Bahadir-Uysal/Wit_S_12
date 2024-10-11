@@ -1,27 +1,34 @@
-export const skillIcons = [
+
+
+export const skillsLeft = [
+
+  
   {
-    title1: "JAVASCRIPT",
-    icon1: "/js.png",
+    title: "JAVASCRIPT",
+    icon: "/js.png",
   },
   {
-    title2: "REACT",
+    title: "REACT",
     icon: "/reaact.png",
   },
   {
-    title3: "REDUX",
+    title: "REDUX",
     icon: "/redux.png",
-    backgroundColor: "bg-light-redux",
+    backgroundColor: "bg-light-redux"
   },
+];
+
+ export const skillsRight = [
   {
-    title4: "NODE",
+    title: "NODE",
     icon: "/node.png",
   },
   {
-    title5: "VS CODE",
+    title: "VS CODE",
     icon: "/vscode.png",
   },
   {
-    title6: "FIGMA",
+    title: "FIGMA",
     icon: "/figma.png",
   },
 ];

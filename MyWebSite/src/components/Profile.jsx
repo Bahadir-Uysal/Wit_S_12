@@ -1,38 +1,39 @@
 import profil from "../assets/profil.png";
 import "./Profile.css";
+import { useLanguageContext } from "../contexts/LanguageContext";
 function Profile() {
+  const { texts } = useLanguageContext();
+
   return (
     <>
       <div className="profile-container">
-        <h1>Profile</h1>
+        <h1>{texts.profileSection.heading}</h1>
         <div className="profile-content">
           <div className="profile-info">
-            <h2>Basic Information</h2>
+            <h2>{texts.profileSection.basicInfoTitle}</h2>
             <span>
-              Doğum Tarihi <p>23.03.1995</p>
+              <strong>{texts.profileSection.birthDate} </strong><p>{texts.profileSection.birthDateValue}</p>
             </span>
             <span>
-              İkamet Şehri <p>İstanbul</p>
+              <strong>{texts.profileSection.city}</strong> <p>{texts.profileSection.cityValue}</p>
             </span>
             <span>
-              Eğitim Durumu <p>Hacettepe Ünv. Biyoloji Lisans, 2016</p>
+            <strong>{texts.profileSection.education}</strong> <p>{texts.profileSection.educationValue}</p>
             </span>
             <span>
-              Tercih Ettiği Rol<p>Frontend, UI</p>
+            <strong>{texts.profileSection.preferredRole}</strong><p>{texts.profileSection.preferredRoleValue}</p>
             </span>
           </div>
           <div className="profile-img">
             <img src={profil} alt="" />
           </div>
           <div className="profile-about">
-            <h2>About Me</h2>
+            <h2>{texts.profileSection.aboutMeTitle}</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
-              aut, odit laborum aliquam voluptatum nisi mollitia.
+            {texts.profileSection.aboutMeText1}
             </p>
             <p>
-              Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod
-              deserunt quam temporibus cumque magnam!
+            {texts.profileSection.aboutMeText2}
             </p>
           </div>
         </div>
