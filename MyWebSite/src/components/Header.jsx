@@ -7,7 +7,7 @@ function Header() {
   return (
     <>
       <header className="header">
-      <h1>Bahadır UYSAL</h1>
+        <h1>Bahadır UYSAL</h1>
         <div className="lang-options">
           {language === "tr" ? (
             <>
@@ -28,7 +28,11 @@ function Header() {
             <img
               onClick={toggleTheme}
               src={theme === "dark" ? "dark-switch.png" : "light-switch.png"}
-              alt="theme mode"
+              alt={
+                theme === "dark"
+                  ? "Switch to light mode"
+                  : "Switch to dark mode"
+              }
               className="h-6 cursor-pointer"
             />
             <div className="uppercase  text-dark-pblila dark:text-dark-silver font-bold">

@@ -2,14 +2,14 @@
 
 export const skillsLeft = [
 
-  
+
   {
     title: "JAVASCRIPT",
     icon: "/js.png",
   },
   {
     title: "REACT",
-    icon: "/reaact.png",
+    icon: "/react.png",
   },
   {
     title: "REDUX",
@@ -25,10 +25,10 @@ export const skillsLeft = [
   },
   {
     title: "VS CODE",
-    icon: "/vscode.png",
+    icon: "/vscode.jpeg",
   },
   {
     title: "FIGMA",
-    icon: "/figma.png",
+    icon: "/figma.jpeg",
   },
 ];

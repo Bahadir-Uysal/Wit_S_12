@@ -1,0 +1,28 @@
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 454px;
+}
+
+
+.footer-content {
+    max-width: 483px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-heading{
+    color: #4731D3;
+}
+
+.mail{
+    color:#4731D3;
+}
+
+.social-icons {
+    size: 5rem;
+}
