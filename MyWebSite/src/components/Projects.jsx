@@ -1,5 +1,5 @@
 import "./Projects.css";
-import face from "../assets/project-1.png";
+
 
 import { useLanguageContext } from "../contexts/LanguageContext";
 function Projects() {
@@ -12,7 +12,7 @@ function Projects() {
         {cards.map((card,index) => (
           <div key={index} className="project-content">
             <div className="project-img">
-              <img src={face} alt="" />
+              <img src={card.img} alt="" />
             </div>
             <div className="project-info">
               <h2>{card.name}</h2>
@@ -32,30 +32,6 @@ function Projects() {
           </div>
         ))}
 
-        {/* <div className="project-content">
-          <div className="project-img">
-            <img src={monitor} alt="" />
-          </div>
-          <div className="project-info">
-            <h2>Journey</h2>
-            <p>
-              A simple, customizable, minimal setup cookie plugin that allows
-              your users to select which cookies to accept or decline. This was
-              created with vanilla JS, SCSS and Parcel Bundler and is available
-              as a NPM package and the git repository makes any type of
-              customization to code and themes possible.
-            </p>
-            <div className="project-list">
-              <p>react</p>
-              <p>redux</p>
-              <p>vercel</p>
-            </div>
-            <div className="project-links">
-              <a href="">View Site</a>
-              <a href="">Github</a>
-            </div>
-          </div>
-        </div> */}
       </div>
     </>
   );

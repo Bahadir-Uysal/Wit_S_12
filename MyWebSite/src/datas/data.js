@@ -32,7 +32,7 @@ export const languageData = {
       heading: "Projects",
       projects: [
         {
-          img: "",
+          img: "movie-app.png",
           name: "MOVIE APP",
           desc: "A movie app that I developed during my early learning processes.",
           skill1: "react",
@@ -42,14 +42,14 @@ export const languageData = {
           github: "https://github.com/Bahadir-Uysal/Movie-App",
         },
         {
-          img: "",
-          name: "REDUX WATCHLIST",
-          desc: "One of the projects featured in this portfolio is the Favorite Movie Archive, built using Redux for state management. In this project, I implemented a watchlist feature where users can browse through movies, add their favorite movies to a watchlist, and manage this list efficiently.",
+          img: "drink-water.png",
+          name: "DRINK WATER",
+          desc: "An application that visualizes your daily water consumption needs and makes it easy to follow",
           skill1: "react",
           skill2: "redux",
           skill3: "vercel",
           link: "düzenlenecektir.",
-          github: "https://github.com/Bahadir-Uysal/Movie-App",
+          github: "https://github.com/Bahadir-Uysal/Drink-Water",
         },
       ],
     },
@@ -94,7 +94,7 @@ export const languageData = {
       heading: "Projeler",
       projects: [
         {
-          img: "",
+          img: "movie-app.png",
           name: "MOVIE APP",
           desc: "İlk öğrenim süreçlerimde geliştridiğim bir film uygulaması.",
           skill1: "react",
@@ -104,9 +104,9 @@ export const languageData = {
           github: "https://github.com/Bahadir-Uysal/Movie-App",
         },
         {
-          img: "",
-          name: "REDUX İZLEME LİSTESİ",
-          desc: "Bu portföyde yer alan projelerden biri, Favori Film Arşivi olup, Redux kullanılarak durum yönetimi sağlanmıştır. Bu projede, kullanıcıların filmler arasında gezinebileceği, favori filmlerini izleme listesine ekleyebileceği ve bu listeyi verimli bir şekilde yönetebileceği bir izleme listesi özelliği uyguladım.",
+          img: "drink-water.png",
+          name: "DRINK WATER",
+          desc: "Günlük su tüketim ihtiyacınızı görselleştirerek takibini kolaylaştıran bir uygulama.",
           skill1: "react",
           skill2: "redux",
           skill3: "vercel",

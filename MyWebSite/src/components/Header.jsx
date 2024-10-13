@@ -11,7 +11,7 @@ function Header() {
         <div className="lang-options">
           {language === "tr" ? (
             <>
-              <span>Change to </span>
+              <span> Change to </span>
               <span onClick={() => changeLang("en")}>
                 {texts.introSection.currentLang}
               </span>
@@ -21,7 +21,7 @@ function Header() {
               <span onClick={() => changeLang("tr")}>
                 {texts.introSection.currentLang}
               </span>
-              <span>'ye geç</span>
+              <span> 'ye geç</span>
             </>
           )}
           <div className="theme-optios">

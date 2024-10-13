@@ -14,18 +14,18 @@ export const skillsLeft = [
   {
     title: "REDUX",
     icon: "/redux.png",
-    backgroundColor: "bg-light-redux"
+    
   },
 ];
 
  export const skillsRight = [
   {
     title: "NODE",
-    icon: "/node.png",
+    icon: "/node.jpeg",
   },
   {
     title: "VS CODE",
-    icon: "/vscode.jpeg",
+    icon: "/vscode.png",
   },
   {
     title: "FIGMA",

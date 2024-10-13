@@ -1,5 +1,6 @@
 .projects-container {
     background-color: #CBF281;
+    width: 1440px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -52,4 +53,14 @@
     font-size: 14px;
     padding: 9px 18px 9px 18px;
     margin: 0;
+}
+
+.project-links{
+    display: flex;
+    gap: 2rem;
+    
+}
+
+.project-links a {
+    color: #120B39;
 }
