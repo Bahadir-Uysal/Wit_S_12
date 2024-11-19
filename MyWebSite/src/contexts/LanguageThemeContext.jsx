@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useState } from "react";
 import { getFromLocalStorage, saveToLocalStorage } from "../hooks/localStorage";
-import { languageData } from "../datas/data";
+import { languageData } from "../content/data";
 import PropTypes from "prop-types";
 import axios from "axios";
 

@@ -1,14 +1,13 @@
-import "./App.css";
-import Hero from "./components/Hero";
-import Skills from "./components/Skills";
-import Profile from "./components/Profile";
-import Projects from "./components/Projects";
+import IntroSection from "./components/IntroSection";
+import SkillsSection from "./components/SkillsSection";
+import ProfileSection from "./components/ProfileSection";
+import ProjectsSection from "./components/ProjectsSection";
+import FooterSection from "./components/FooterSection";
+import { useLanguageTheme } from "./contexts/LanguageThemeContext";
 import { useEffect } from "react";
-import { useLanguageContext } from "./contexts/LanguageContext";
-import Footer from "./components/Footer";
 
 function App() {
-  const { theme } = useLanguageContext();
+  const { theme } = useLanguageTheme();
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -16,15 +15,14 @@ function App() {
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
-
   return (
     <>
       <div className="App bg-light-white dark:bg-dark-gray">
-        <Hero></Hero>
-        <Skills></Skills>
-        <Profile></Profile>
-        <Projects></Projects>
-        <Footer></Footer>
+        <IntroSection />
+         <SkillsSection /> 
+        <ProfileSection />
+         <ProjectsSection />
+        <FooterSection />  
       </div>
     </>
   );
