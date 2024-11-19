@@ -1,13 +1,19 @@
-/* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext, useEffect, useState } from "react";
-import { getFromLocalStorage, saveToLocalStorage } from "../hooks/localStorage";
-import { languageData } from "../content/data";
-import PropTypes from "prop-types";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+import React, { createContext, useState, useContext } from "react";
 import axios from "axios";
+import { languageData } from "../content/langmockdata.js";
+import {
+  saveToLocalStorage,
+  getFromLocalStorage,
+} from "../hooks/localstoragehelper.js";
+import { useEffect } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const LanguageContext = createContext();
+const LanguageThemeContext = createContext();
 
-export const LanguageContextProvider = ({ children }) => {
+export const LanguageThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(getFromLocalStorage("theme") || "light");
   const [language, setLanguage] = useState(
     getFromLocalStorage("language") || "tr"
@@ -21,40 +27,42 @@ export const LanguageContextProvider = ({ children }) => {
       setTheme("light");
     }
     saveToLocalStorage("theme", theme === "light" ? "dark" : "light");
+    toast.success(texts.alertSection.themeSuccess);
   }
-  function changeLang(lang) {
-    setLanguage(lang);
-    saveToLocalStorage("language", lang);
 
-    const data =
-      lang === "EN"
-        ? { language: languageData.en }
-        : { language: languageData.tr };
+  function changeLang(lang) {
+    setLanguage(() => {
+      saveToLocalStorage("language", lang);
+      return lang;
+    });
+  
+    const data = lang === "en" ? { language: languageData.en } : { language: languageData.tr };
+  
     axios
       .post("https://reqres.in/api/workintech", data)
       .then((response) => {
         console.log("Dil başarıyla gönderildi:", response.data);
+        toast.success(languageData[lang].alertSection.success);
       })
       .catch((error) => {
         console.error("Dil değiştirme sırasında hata oluştu:", error);
+        toast.error(languageData[lang].alertSection.error);
       });
   }
+  
 
   useEffect(() => {
     setTexts(languageData[language]);
   }, [language]);
 
   return (
-    <LanguageContext.Provider
+    <LanguageThemeContext.Provider
       value={{ theme, toggleTheme, language, changeLang, texts }}
     >
       {children}
-    </LanguageContext.Provider>
+    </LanguageThemeContext.Provider>
   );
 };
 
-export const useLanguageContext = () => useContext(LanguageContext);
-
-LanguageContextProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+//context hooku
+export const useLanguageTheme = () => useContext(LanguageThemeContext);
